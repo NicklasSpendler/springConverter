@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p th:text="${newTemp}">Hello, Spring</p>
+    <p th:text="${tempType}">TempType</p>
+
+    <p>Url Param</p>
+
+    <form action="/convert" method="get">
+        <input type="text" name="temp" placeholder="Enter Temperature">
+        <input type="submit" name="tempType" value="fah">
+        <input type="submit" name="tempType" value="cel">
+    </form>
+
+    <p>Post request</p>
+
+    <form action="/convertPost" method="post">
+        <input type="text" name="temp" placeholder="Enter Temperature">
+        <input type="submit" name="tempType" value="fah">
+        <input type="submit" name="tempType" value="cel">
+    </form>
+
+
+</body>
+</html>
